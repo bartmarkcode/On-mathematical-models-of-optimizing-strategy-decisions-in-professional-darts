@@ -4,7 +4,7 @@ Markus Barth
 
 This gitHub repository comprises some implementations in python to work with the game of darts/ with the given data set.
 
-draw_board_polar.py:  Code that draws the board together with polar coordinate labels.
+*draw_board_polar.py*:  Code that draws the board together with polar coordinate labels.
 
 read_in_data.py:  Contains the first steps of reading in the data set/ clearing the data/ transform the data in wanted shape/ rename colomns/ clear unnecessary information from the data. In addition, we created subtables for each information item (i.e. for each player-year combination). Furthermore, it contains the function 'combi_file()' that creates tuples (TR,z,n) that will be used as input for the upcoming EM-algorithm. The resulting combinations can be found in the repository under the name 'combinations_all_players.xlsx'. Further, we deduce several in-game informations of the players (and their perfomance) and summarize them in the table 'constructed_information_table.xlsx'.
 
