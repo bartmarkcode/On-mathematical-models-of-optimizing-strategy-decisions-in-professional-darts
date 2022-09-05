@@ -9,14 +9,15 @@ This gitHub repository comprises some implementations in python to work with the
 *read_in_data.py*:  Contains the first steps of reading in the data set/clearing the data/transforming the data in wanted shape/renaming colomns/removing unnecessary information from the data. In addition, we created sub-tables for each information item (i.e. for each player-year combination) --> See the folder **Player_specific_tables**.
 Furthermore, it contains the function 'combi_file( )' that creates tuples (TR,z,n) that will be used as input for the upcoming EM-algorithm. The resulting combinations can be found in the repository under the name **combinations_all_players.xlsx**. Further, we deduce several in-game informations of the players (and their perfomance) and summarize them in the table **constructed_information_table.xlsx**.
 
-The folder 'Skill_model_DP_9D_Markov' contains the necessary code for working with the models described in the thesis:
 
-function_tools.py:  Code that we take over from Haugh and Wang. It provides some file operation functions like reading and saving.
+The folder **Skill_model_DP_9D_Markov** contains the necessary code for working with the models described in the thesis:
 
-dartboard.py: Code that we take over from Haugh and Wang. It provides the layout of the dart board and the 1mm grid of aiming locations. (We added the function 'score_matrix()'
+*function_tools.py*:  Code that we take over from Haugh and Wang. It provides some file operation functions like reading and saving.
 
-read_in_combinations.py:  reads in all combinations for an information item from 'combinations_all_players.xlsx' to use it in:
-em_algorithm.py:  we adjusted and extended the R-implementation from Tibshirani et al. to compute the estimated covariance matrix for each information and then store it in 'Estimated_variances.xlsx'.
+*dartboard.py*: Code that we take over from Haugh and Wang. It provides the layout of the dart board and the 1mm grid of aiming locations. (We added the function 'score_matrix( )'
+
+*read_in_combinations.py*: Reads in all combinations for an information item from **combinations_all_players.xlsx** to use it in:
+*em_algorithm.py*:  We adjusted and extended the R-implementation from Tibshirani et al. to compute the estimated covariance matrix for each information and then store it in **Estimated_variances.xlsx**. 
 
 read_in_sigma.py: read in the values from 'Estimated_variances.xlsx', create the covariance matrices and then use them in:
 
