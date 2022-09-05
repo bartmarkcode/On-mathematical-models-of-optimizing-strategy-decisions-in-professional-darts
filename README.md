@@ -1,5 +1,5 @@
-# darts_thesis
-python implementation for darts master thesis
+# On mathematical models of optimizing strategy decisions in professional darts
+## Python implementation for darts master thesis
 Markus Barth
 
 This gitHub repository comprises some implementations in python to work with the game of darts/ with the given data set.
