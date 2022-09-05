@@ -6,8 +6,8 @@ This gitHub repository comprises some implementations in python to work with the
 
 *draw_board_polar.py*:  Code that draws the board together with polar coordinate labels.
 
-*read_in_data.py*:  Contains the first steps of reading in the data set/ clearing the data/ transforming the data in wanted shape/ renaming colomns/ clear unnecessary information from the data. In addition, we created sub-tables for each information item (i.e. for each player-year combination) --> See the folder **Player_specific_tables**.
-Furthermore, it contains the function 'combi_file()' that creates tuples (TR,z,n) that will be used as input for the upcoming EM-algorithm. The resulting combinations can be found in the repository under the name 'combinations_all_players.xlsx'. Further, we deduce several in-game informations of the players (and their perfomance) and summarize them in the table 'constructed_information_table.xlsx'.
+*read_in_data.py*:  Contains the first steps of reading in the data set/clearing the data/transforming the data in wanted shape/renaming colomns/removing unnecessary information from the data. In addition, we created sub-tables for each information item (i.e. for each player-year combination) --> See the folder **Player_specific_tables**.
+Furthermore, it contains the function 'combi_file( )' that creates tuples (TR,z,n) that will be used as input for the upcoming EM-algorithm. The resulting combinations can be found in the repository under the name **combinations_all_players.xlsx**. Further, we deduce several in-game informations of the players (and their perfomance) and summarize them in the table **constructed_information_table.xlsx**.
 
 The folder 'Skill_model_DP_9D_Markov' contains the necessary code for working with the models described in the thesis:
 
