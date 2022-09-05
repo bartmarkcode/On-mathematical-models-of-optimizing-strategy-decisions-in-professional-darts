@@ -34,6 +34,6 @@ The folder **Skill_model_DP_9D_Markov** contains the necessary code for working 
 
 *markov_approach.py*: Create the set of all possible checkouts for a given score as well as the first target score of such checkouts, create the transition using the minimum expected time to absorption property (transform them in transition maps) and compute the final optimal Markov strategy for a given total score such that we get an output table **Markov_recommendations.xlsx**. (approach 2).
 
-*nined.py*:  Creating player-specific skill sets K using the adapted action set (also the alternative version using the 1mm grid is provided), creating skill maps and produce 9D-strategies to receive an output table **9D_recommendations.xlsx**. (approach 3).
+*nine_d.py*:  Creating player-specific skill sets K using the adapted action set (also the alternative version using the 1mm grid is provided), creating skill maps and produce 9D-strategies to receive an output table **9D_recommendations.xlsx**. (approach 3).
 
-*comparison.py*: All functions that were necessary to provide us with the findings which are stated in the Results-section of the thesis. (In addition, we provide the function 'plot_track( )' such that we can visualize recommended tracks and compare them on the fly)
+*comparisons.py*: All functions that were necessary to provide us with the findings which are stated in the Results-section of the thesis. (In addition, we provide the function 'plot_track( )' such that we can visualize recommended tracks and compare them on the fly)
