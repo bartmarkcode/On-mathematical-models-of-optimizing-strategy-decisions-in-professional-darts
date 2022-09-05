@@ -17,18 +17,23 @@ The folder **Skill_model_DP_9D_Markov** contains the necessary code for working 
 *dartboard.py*: Code that we take over from Haugh and Wang. It provides the layout of the dart board and the 1mm grid of aiming locations. (We added the function 'score_matrix( )'
 
 *read_in_combinations.py*: Reads in all combinations for an information item from **combinations_all_players.xlsx** to use it in:
-*em_algorithm.py*:  We adjusted and extended the R-implementation from Tibshirani et al. to compute the estimated covariance matrix for each information and then store it in **Estimated_variances.xlsx**. 
 
-read_in_sigma.py: read in the values from 'Estimated_variances.xlsx', create the covariance matrices and then use them in:
+*em_algorithm.py*:  We adjusted and extended the R-implementation from Tibshirani et al. to compute the estimated covariance matrix for each information and then store it in **estimated_variances.xlsx**. 
 
-score_prob_player.py:   Code that we take over from Haugh and Wang which we adjusted at some points. It conducts a numerical integration to evaluate the hitting probability of each score (each score segment in the dartboard and the corresponding the numerical score) associated with each aiming location on the 1mm-grid.
+*read_in_sigma.py*: read in the values from **estimated_variances.xlsx**, create the covariance matrices and then use them in:
 
-evaluate_policy_and_aiming_grid.py: Part of the code that we take over from Haugh and Wang. It provides functions to generate the action set containing 984 aiming points as well as solving the state transition (turn to turn) probability associated with a specified aiming policy in the single player game.
+*score_prob_player.py*: Code that we take over from Haugh and Wang and which we adjusted at some points. It conducts a numerical integration to evaluate the hitting probability of each score (each score segment in the dartboard and the corresponding the numerical score) associated with each aiming location on the 1mm-grid.
 
-maximize_expected_score.py: Functions that output the maximum expected score of a player as well as the corresponding point in the aiming grid. In addtion, it outputs a heatmap.
+*evaluate_policy_and_aiming_grid.py*: Part of the code that we take over from Haugh and Wang. It provides functions to generate the action set containing 984 aiming points as well as solving the state transition (turn to turn) probability associated with a specified aiming policy in the single player game.
 
-DP.py:  Code that we take over from Haugh and Wang. It solves the single player dart game via the dynamic programming formulation (approach 1).
+*maximize_expected_score.py*: Outputs the expected score over the whole 1mm grid and contains functions that output the maximum expected score of a player as well as the corresponding point in the aiming grid. In addtion, it outputs a heatmap for a given player.
 
-Markov.py:  Creates the transition matrix for the closing process and solves the game of darts as a markovian decision process (approach 2).
+*draw_action_set.py*: Visualize the constructed adapted action set in a dartboard. (Additionally, we provide another function visualize recommended tracks in a dartboard).
 
-9D.py:  Outputs a naive recommendation for a player at each specific point in the game (approach 3).
+*DP.py*:  Code that we take over from Haugh and Wang. It solves the single player dart game via the dynamic programming formulation. We added the function 'solve_noturn( )' to receive the output of the DP version without turn feature in our desired form. For this reason, we also adjusted the function 'solve_singlegame( )'. As a result, we created three recommendation tables: **DP_noturn_recommendations.xlsx**, **DP_turn_feature_recommendations.xlsx** and **DP_turn_feature_extended_recommendations.xlsx**. (approach 1)
+
+*markov_approach.py*: Create the set of all possible checkouts for a given score as well as the first target score of such checkouts, create the transition using the minimum expected time to absorption property (transform them in transition maps) and compute the final optimal Markov strategy for a given total score such that we get an output table **Markov_recommendations.xlsx**. (approach 2).
+
+*nined.py*:  Creating player-specific skill sets K using the adapted action set (also the alternative version using the 1mm grid is provided), creating skill maps and produce 9D-strategies to receive an output table **9D_recommendations.xlsx**. (approach 3).
+
+*comparison.py*: All functions that were necessary to provide us with the findings which are stated in the Results-section of the thesis. (In addition, we provide the function 'plot_track( )' such that we can visualize recommended tracks and compare them on the fly)
